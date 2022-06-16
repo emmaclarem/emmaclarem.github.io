@@ -76,6 +76,7 @@ li a:hover {
 p {
     font-family: 'Montserrat', sans-serif;
     font-size: 1rem;
+    line-height: 1.5rem;
     font-weight: 400;
     color: #121212;
 }
@@ -102,6 +103,7 @@ p {
 
 .nav-title {
     align-self: flex-start;
+    margin-left: 20px;
 }
 
 .nav-links ul {
@@ -236,7 +238,7 @@ p {
     justify-self: left;
     text-align: left;
     padding: 0 10px;
-    width: 90%;
+    width: 80%;
 }
 
 .about-me h2 {
@@ -270,16 +272,24 @@ p {
 }
 
 .about-contact h3 {
-    text-decoration: none;
+    /* text-decoration: none;
     grid-area: about-contact;
-    display: flex;
     text-align: left;
     padding: 0 0.2rem;
     padding-left: 10px;
-    margin-top: 10px;
+    margin-top: 10px; */
 }
 
-.about-contact a {
+.about-contact {
+    justify-self: start;
+    align-self: center;
+    padding-left: 10px;
+}
+
+.about-contact li a {
+    text-decoration: none;
+    grid-area: about-contact;
+    text-align: left;
     color: #121212;
     font-size: 1rem;
     letter-spacing: 0.1rem;
@@ -287,8 +297,7 @@ p {
     text-decoration-color: #ddf760;
     text-decoration-thickness: 0.2rem;
     text-underline-offset: 0.2rem;
-    margin-bottom: 20px;
-    padding: 0 0.2rem;
+    margin: 0;
 }
 
 .about-contact a:hover {
@@ -300,11 +309,12 @@ p {
 .tags-pic img {
     width: 150px;
     grid-area: tags-pic;
-    display: grid;
-    justify-self: end;
     padding: 0px;
 }
 
+.tags-pic {
+    justify-self: center;
+}
 
 /*---------- ABOUT PAGE MEDIA QUERY ----------*/
 
