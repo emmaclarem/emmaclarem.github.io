@@ -1,5 +1,14 @@
 /*---------- GLOBAL STYLES ----------*/
 
+@font-face {
+    font-family: 'NewakeDemo';
+    src: url('../font/newake-font-demo-webfont.woff2') format('woff2'),
+         url('../font/newake-font-demo-webfont.woff') format('woff'),
+         url('../font/newake-font-demo-webfont.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -22,16 +31,15 @@ body {
 }
 
 h3 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Space Grotesk', sans-serif;
     font-size: 1rem;
     font-weight: 400;
-    letter-spacing: 0.3rem;
     color: #121212;
     text-align: center;
 }
 
 h2 {
-    font-family: 'Bungee Shade', cursive;
+    font-family: 'NewakeDemo', cursive;
     font-weight: 800;
     margin-left: 0.5rem ;
     line-height: 2.5rem;
@@ -48,10 +56,9 @@ li {
     list-style: none;
     text-align: center;
     display: inline;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Space Grotesk', sans-serif;
     font-weight: 400;
     font-size: 1rem;
-    letter-spacing: 0.1rem;
     color: #121212;
 }
 
@@ -74,7 +81,7 @@ li a:hover {
 }
 
 p {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Space Grotesk', sans-serif;
     font-size: 1rem;
     line-height: 1.5rem;
     font-weight: 400;
@@ -103,7 +110,7 @@ p {
 
 .nav-title {
     align-self: flex-start;
-    margin-left: 20px;
+    margin: 3px 0px 0px 20px;
 }
 
 .nav-links ul {
@@ -173,8 +180,7 @@ p {
 }
 
 .main-container h1 {
-    font-family: 'Bungee Shade', cursive;
-    text-shadow: -3px 3px 10px rgba(18, 18, 18, 0.2);
+    font-family: 'NewakeDemo', cursive;
     color: #121212;
     font-size: 5rem;
     font-weight: 400;
@@ -193,8 +199,12 @@ p {
 }
 
 @media only screen and (max-width: 500px) {
+    .main-header {
+        display: flex;
+        flex-wrap: wrap;
+    }
     .main-container h1 {
-        font-size: 16vw;
+        line-height: 4.5rem;
     }
 }
 
@@ -204,7 +214,6 @@ p {
 .coming-soon {
     text-align: center;
     margin: 20px;
-    text-shadow: -3px 3px 10px rgba(18, 18, 18, 0.2);
 }
 
 
@@ -271,15 +280,6 @@ p {
     text-underline-offset: 0.2rem;
 }
 
-.about-contact h3 {
-    /* text-decoration: none;
-    grid-area: about-contact;
-    text-align: left;
-    padding: 0 0.2rem;
-    padding-left: 10px;
-    margin-top: 10px; */
-}
-
 .about-contact {
     justify-self: start;
     align-self: center;
@@ -292,7 +292,6 @@ p {
     text-align: left;
     color: #121212;
     font-size: 1rem;
-    letter-spacing: 0.1rem;
     text-decoration: underline;
     text-decoration-color: #ddf760;
     text-decoration-thickness: 0.2rem;
@@ -351,6 +350,9 @@ p {
         justify-self: center;
         max-width: 250px;
     }
+    .tags-pic{
+        margin-top: 20px;
+    }
 }
 
 
@@ -381,11 +383,6 @@ p {
     margin: 0px;
 }
 
-@media only screen and (max-width:670px) {
-    .contact-list li a {
-        letter-spacing: 0rem;
-    }
-}
 
 
 /*---------- FOOTER STYLING ----------*/
