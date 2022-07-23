@@ -283,27 +283,29 @@ p {
 
 .about-contact {
     justify-self: start;
-    align-self: center;
+    align-self: flex-start;
     padding-left: 10px;
 }
 
-.about-contact li a {
+.about-contact div {
+    margin-top: 15px;
+    background-color: #ADB3D5;
+    padding: 0.5em 1em;
+    border-radius: 50px;
+    text-align: center;
+}
+
+.about-contact a {
     text-decoration: none;
     grid-area: about-contact;
     text-align: left;
     color: #121212;
     font-size: 1rem;
-    text-decoration: underline;
-    text-decoration-color: #ddf760;
-    text-decoration-thickness: 0.2rem;
-    text-underline-offset: 0.2rem;
     margin: 0;
 }
 
-.about-contact a:hover {
+.about-contact div:hover {
     background-color: #ddf760;
-    border-radius: 4px;
-    text-decoration: none;
 }
 
 .tags-pic img {
@@ -314,6 +316,7 @@ p {
 
 .tags-pic {
     justify-self: center;
+align-self: center;
 }
 
 /*---------- ABOUT PAGE MEDIA QUERY ----------*/
@@ -331,9 +334,11 @@ p {
             "about-contact";
         margin: 60px 20px 20px 20px;
     }
+    #profile-pic {
+        width: min(80%, 250px);
+    }
     .about-me {
         justify-self: center;
-        text-align: justify;
         padding: 10px;
         width: 100%;
     }
