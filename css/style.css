@@ -21,13 +21,18 @@ body {
     font-size: 100%;
 }
 
+*:focus {
+    outline: 3px solid #6767ad;
+    border-radius: 5px;
+}
+
 #current-page {
     text-decoration: underline;
     text-decoration-color: #ddf760;
     text-decoration-thickness: 0.18rem;
 }
 
-#current-page:hover {
+#current-page:hover, #current-page:focus {
     text-decoration: none;
 }
 
@@ -76,7 +81,7 @@ li a {
 
 }
 
-li a:hover {
+li a:hover, li a:focus {
     background-color: #ddf760;
     border-radius: 4px;
     text-decoration: none;
@@ -257,7 +262,7 @@ p {
     overflow: hidden;
 }
 
-.card:hover, .card:active {
+.card:hover, .card:focus {
     transform: scale(1.03);
 }
 
@@ -296,8 +301,9 @@ p {
     margin-inline: 20px;
 }
 
-.card-icons a:hover, .card-icons a:active {
+.card-icons a:hover, .card-icons a:focus {
     color: #ddf760;
+    padding: 2px;
     filter: drop-shadow(2px 2px 3px rgba(38, 12, 57, 0.7));
 }
 
@@ -388,7 +394,7 @@ p {
     margin: 0;
 }
 
-.about-contact div:hover {
+.about-contact div:hover, .about-contact div:focus {
     background-color: #ddf760;
 }
 
@@ -495,7 +501,7 @@ align-self: center;
     margin: 0 15px;
 }
 
-.footer-icons img:hover {
+.footer-icons img:hover, .footer-icons img:focus {
     background-color: #ADB3D5;
     border-radius: 4px;
 }
