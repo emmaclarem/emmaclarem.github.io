@@ -42,6 +42,7 @@ h3 {
 h2 {
     font-family: 'NewakeDemo', sans-serif;
     font-weight: 800;
+    letter-spacing: 0.05em;
     margin-left: 0.5rem ;
     line-height: 2.5rem;
     color: #121212;
@@ -107,6 +108,7 @@ p {
     background-color: #ADB3D5;
     color: #121212;   
     height: 42px;
+    z-index: 10;
 }
 
 .nav-title {
@@ -212,9 +214,79 @@ p {
 
 /*---------- PORTFOLIO STYLING ----------*/
 
-.coming-soon {
+.portfolio-header {
     text-align: center;
-    margin: 20px;
+    margin-top: 100px;
+    margin-bottom: 20px;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.card {
+    width: 250px;
+    background-color:#d8d6eb;
+    border: 5px solid #adb3d5;
+    border-radius: 20px;
+    text-align: center;
+    transition: all 0.2s;
+    box-shadow: 5px 5px 15px rgba(38, 12, 57, 0.2);
+    margin: 1.5rem;
+}
+
+.card img {
+    width: 100%;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    overflow: hidden;
+}
+
+.card:hover, .card:active {
+    transform: scale(1.03);
+}
+
+.card-text, .card-icons {
+    margin: 0.6rem;
+}
+
+.card-text-heading {
+    font-family: 'NewakeDemo', sans-serif;
+    letter-spacing: 0.05em;
+    font-size: 1.3rem;
+}
+
+.card-text-subhead {
+    opacity: 0.6;
+    font-size: 0.8rem;
+}
+
+.card-text-p {
+    line-height: normal;
+    font-size: 0.9rem;
+}
+
+.card-text > * {
+    /* margin-block: 0.5rem; */
+    padding-top: 5px;
+}
+
+.card-icons {
+    padding: 8px 0;
+}
+
+.card-icons a {
+    color: #6767ad;
+    margin-inline: 15px;
+}
+
+.card-icons a:hover, .card-icons a:active {
+    color: #ddf760;
+    filter: drop-shadow(2px 2px 3px rgba(38, 12, 57, 0.7));
 }
 
 
