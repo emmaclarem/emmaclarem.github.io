@@ -375,26 +375,28 @@ p {
     justify-self: start;
     align-self: flex-start;
     padding-left: 10px;
+    grid-area: about-contact;
 }
 
-.about-contact div {
+button {
+    border: none;
     margin-top: 15px;
     background-color: #ADB3D5;
     padding: 0.5em 1em;
     border-radius: 50px;
     text-align: center;
+    font-family: 'Space Grotesk', sans-serif;
 }
 
-.about-contact a {
+button a {
     text-decoration: none;
-    grid-area: about-contact;
     text-align: left;
     color: #121212;
     font-size: 1rem;
     margin: 0;
 }
 
-.about-contact div:hover, .about-contact div:focus {
+button:hover, button a:focus {
     background-color: #ddf760;
 }
 
@@ -406,7 +408,7 @@ p {
 
 .tags-pic {
     justify-self: center;
-align-self: center;
+    align-self: center;
 }
 
 /*---------- ABOUT PAGE MEDIA QUERY ----------*/
