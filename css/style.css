@@ -281,6 +281,12 @@ p {
     font-size: 0.8rem;
 }
 
+.portfolio-logo {
+    color:#6767ad;
+    opacity: 0.5;
+    margin-inline: 0.5rem;
+}
+
 .card-text-p {
     line-height: 1.5em;
     font-size: 0.9rem;
