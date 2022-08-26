@@ -6,6 +6,7 @@ This is my portfolio website, which will be added to as I complete more projets.
 ### New site features/to-do
 - [x] Single-page website
 - [x] Use Sass/SCSS for build
+- [ ] Use mixins for media queries
 - [ ] Scroll progress bar at top?
 - [ ] Fade-in animations on scroll
 - [ ] Build & deploy with Netlify
