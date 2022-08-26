@@ -31,7 +31,7 @@ body {
 }
 
 *:focus {
-  outline: 3px solid var(--peri);
+  outline: 3px solid var(--black);
   border-radius: 5px;
 }
 
@@ -73,24 +73,51 @@ section {
   width: min(65ch, 85%);
 }
 
+.social-links {
+  margin-block: 1rem;
+}
+
+.social-links > * {
+  padding: 0.75em;
+}
+
 .fa-4x {
   color: var(--cream);
+}
+
+.fa-lg {
+  margin-right: 0.65em;
 }
 
 .dev-icons {
   gap: 1rem;
 }
+.dev-icons > * {
+  margin: min(2vw, 2rem);
+}
 
 /*---------- TYPOGRAPHY STYLES ----------*/
-.dark-text {
+.text-dark {
   color: var(--black);
 }
-
-.light-text {
+.text-light {
   color: var(--cream);
 }
-
-.peri-text {
+.text-peri {
+  color: var(--peri);
+  transition: all 0.2s;
+}
+.text-peri:hover, .text-peri:focus {
+  color: var(--black);
+}
+.text-lilac {
+  color: var(--lilac);
+}
+.text-lav {
+  color: var(--lavender);
+  transition: all 0.2s;
+}
+.text-lav:hover, .text-lav:focus {
   color: var(--peri);
 }
 
@@ -122,6 +149,7 @@ h2 {
   font-size: 3rem;
   font-weight: 400;
   line-height: 2.5rem;
+  padding-block: 1rem;
 }
 
 h3 {
@@ -164,12 +192,26 @@ li a:hover, li a:focus {
     text-decoration: none;
 } */
 p {
+  line-height: 1.5rem;
+}
+
+p, a {
   font-family: "Space Grotesk", sans-serif;
   font-size: 1rem;
-  line-height: 1.5rem;
   font-weight: 400;
   color: var(--black);
   max-width: 65ch;
+}
+
+a {
+  text-decoration: none;
+  margin-block: 1em;
+  cursor: pointer;
+}
+a:hover, a:focus {
+  -webkit-text-decoration: underline var(--yellow);
+          text-decoration: underline var(--yellow);
+  color: var(--cream);
 }
 
 /*---------- NAVBAR STYLING ----------*/
