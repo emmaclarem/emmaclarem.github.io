@@ -383,6 +383,9 @@ button:active {
 }
 
 .captcha {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   margin-bottom: 1rem;
   box-shadow: 5px 5px 15px rgba(38, 12, 57, 0.2);
 }
