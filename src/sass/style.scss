@@ -41,7 +41,7 @@ body {
 }
 
 section {
-    width: min(1400px, 95%);
+    width: min(1400px, 97%);
     margin-inline: auto;
 }
 
@@ -269,18 +269,19 @@ a {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    margin-bottom: 2rem;
+    margin-block: 2rem;
 }
 
 .card {
     width: min(280px, 90%);
+    height: 100%;
     background-color: var(--lilac);
     border: 5px solid var(--lavender);
     border-radius: 20px;
     text-align: center;
     transition: all 0.2s;
     box-shadow: 5px 5px 15px rgba(38, 12, 57, 0.2);
-    margin: 1.5rem;
+    margin: 1rem;
 
     img {
         width: 100%;
@@ -328,18 +329,6 @@ a {
     }
     &:hover, &:focus {
         transform: scale(1.03);
-    }
-}
-
-
-@media only screen and (max-width:670px) {
-    .card {
-        margin: 1.5rem 0.5rem;
-    }
-}
-@media only screen and (max-width:670px) {
-    .card {
-        margin: 1.5rem 0.5rem;
     }
 }
  
@@ -441,5 +430,11 @@ button {
 footer {
     position: relative;
     padding-block: 1rem;
+    font-size: 0.75rem;
+}
+
+.footer {
+    width: 90%;
+    margin-inline: auto;
 }
 
