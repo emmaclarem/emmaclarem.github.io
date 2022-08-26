@@ -4,10 +4,10 @@
 This is my portfolio website, which will be added to as I complete more projets. Currently building V2 of the site.
 
 ### New site features/to-do
-- [ ] Single-page website
-- [ ] Use Sass/SCSS for build
+- [x] Single-page website
+- [x] Use Sass/SCSS for build
 - [ ] Scroll progress bar at top?
 - [ ] Fade-in animations on scroll
 - [ ] Build & deploy with Netlify
 - [ ] Contact form (Netlify forms?)
-
+- [ ] Custom message success page
