@@ -59,16 +59,23 @@ section {
   align-self: flex-end;
 }
 
+/*---------- LAYOUT STYLES ----------*/
+.landing {
+  margin-block: 20vh;
+}
+
 .profile-pic {
-  width: min(350px, 85%);
+  width: min(300px, 85%);
 }
 .profile-pic img {
   aspect-ratio: 1/1;
 }
 
-.about-me {
+.about {
+  gap: max(4vw, 1rem);
+}
+.about-text {
   justify-content: space-between;
-  gap: 1.25rem;
   align-items: flex-start;
   width: min(65ch, 85%);
 }
@@ -148,7 +155,7 @@ h1 {
 h2 {
   font-size: 3rem;
   font-weight: 400;
-  line-height: 2.5rem;
+  line-height: 3rem;
   padding-block: 1rem;
 }
 
