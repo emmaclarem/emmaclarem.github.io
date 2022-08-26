@@ -159,10 +159,10 @@ h1, h2, h3 {
 }
 
 h1 {
-    font-size: 5rem;
+    font-size: max(5rem, 8vw);
     font-weight: 400;
     text-align: center;
-    line-height: 5rem;
+    line-height: max(5rem, 8vw);
 }
 
 h2 {
@@ -367,6 +367,13 @@ a {
 .contact {
     gap: 3rem;
     padding: 2.5rem;
+    align-items: flex-start;
+
+    &-details {
+        border: none;
+        gap: 0.75rem;
+        justify-content: flex-start;
+    }
 }
 
 label {
@@ -394,12 +401,12 @@ input, textarea {
 }
 
 input {
-    min-width: 100%;
+    width: 100%;
     min-height: 2rem;
 }
 
 textarea {
-    width: 300px;
+    width: 100%;
     min-height: 6rem;
 }
 
@@ -423,6 +430,11 @@ button {
     &:active {
         transform: translate(2px, 2px);
     }
+}
+
+.captcha {
+    margin-bottom: 1rem;
+    box-shadow: 5px 5px 15px rgba(38, 12, 57, 0.2);
 }
 
 /*---------- FOOTER STYLING ----------*/

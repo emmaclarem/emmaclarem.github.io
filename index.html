@@ -23,7 +23,6 @@
       <img src="../img/menu-icon.svg" class="hamburger-menu">
       <div class="nav-links">
         <ul class="flex">
-          <li><a href="#" id="current-page">home</a></li>
           <li><a href="#projects">projects</a></li>
           <li><a href="#about">about</a></li>
           <li><a href="#contact">contact</a></li>
@@ -164,27 +163,29 @@
       <section id="contact">
         <h2 class="text-light underline underline-yellow centred">contact</h2>
         <div class="flex contact">
-          <div class="flex flex-column">
+          <div class="flex flex-column contact-text">
             <h3 class="text-light">get in touch, i'd love<br>to hear from you</h3>
             <a href="mailto:emmaclarem@outlook.com" target="_blank" class="text-lilac"><i class="fa-solid fa-at fa-lg link-icon"></i>emmaclarem@outlook.com</a>
             <a href="https://www.linkedin.com/in/emma-c-miller/" target="_blank" class="text-lilac"><i class="fa-brands fa-linkedin-in fa-lg link-icon"></i>linkedin.com/in/emma-c-miller</a>
           </div>
           <div class="form">
             <form name="contact" method="POST" data-netlify="true">
-              <p>
-                <label for="name">Name:</label>
-                <input type="text" name="name"/>
-              </p>
-              <p>
-                <label for="email">Email:</label>
-                <input type="email" name="email"/>
-              </p>
+              <fieldset class="flex contact-details">
+                <p>
+                  <label for="name">Name:</label>
+                  <input type="text" name="name"/>
+                </p>
+                <p>
+                  <label for="email">Email:</label>
+                  <input type="email" name="email"/>
+                </p>
+              </fieldset>
               <p>
                 <label for="message">Message:</label>
                 <textarea name="message"></textarea>
               </p>
               <p>
-                <div data-netlify-recaptcha="true"></div>
+                <div data-netlify-recaptcha="true" class="captcha"></div>
               </p>
               <p>
                 <button type="submit">send</button>
