@@ -161,28 +161,31 @@
     <div class="peri-bg">
       <section id="contact">
         <h2 class="light-text underline underline-yellow centred">contact</h2>
-        <div class="flex">
-          <div>
-            <h3>get in touch, i'd love to hear from you</h3>
+        <div class="flex contact">
+          <div class="flex flex-column">
+            <h3 class="light-text">get in touch, i'd love<br>to hear from you</h3>
             <a href="mailto:emmaclarem@outlook.com"><i class="fa-solid fa-square-envelope"></i>emmaclarem@outlook.com</a>
             <a href="https://www.linkedin.com/in/emma-c-miller/"><i class="fa-brands fa-linkedin"></i>linkedin.com/in/emma-c-miller</a>
           </div>
-          <div>
+          <div class="form">
             <form name="contact" method="POST" data-netlify="true">
               <p>
-                <label>Name: <input type="text" name="name"/></label>
+                <label for="name">Name:</label>
+                <input type="text" name="name"/>
               </p>
               <p>
-                <label>Email: <input type="email" name="email"/></label>
+                <label for="email">Email:</label>
+                <input type="email" name="email"/>
               </p>
               <p>
-                <label>Message: <textarea name="message"></textarea></label>
+                <label for="message">Message:</label>
+                <textarea name="message"></textarea>
               </p>
               <p>
                 <div data-netlify-recaptcha="true"></div>
               </p>
               <p>
-                <button type="submit">Send</button>
+                <button type="submit">send</button>
               </p>
             </form>
             

@@ -56,7 +56,6 @@ section {
     }
 }
 
-
 .centred {
     text-align: center;
     width: 100%;
@@ -184,11 +183,7 @@ p {
 
 
 /*---------- NAVBAR STYLING ----------*/
-
-
-
 /*---------- NAVBAR MEDIA QUERY ----------*/
-
 // @media only screen and (max-width: 670px) {
 //     .hamburger-menu {
 //         display: flex;
@@ -215,8 +210,6 @@ p {
 //         display: flex;
 //     }
 // }
-
-
 /*---------- CARDS STYLING ----------*/
 
 .card-container {
@@ -329,8 +322,66 @@ p {
 
 /*---------- CONTACT FORM STYLING ----------*/
 
+.contact {
+    gap: 3rem;
+    padding: 2.5rem;
+}
 
+label {
+    display: block;
+    color: var(--cream);
+}
 
+input, textarea {
+    background-color: var(--cream);
+    border: 3px solid var(--lilac);
+    border-radius: 5px;
+    padding: 0.5em;
+    margin-bottom: 1rem;
+    box-shadow: 5px 5px 15px rgba(38, 12, 57, 0.2);
+    font-family: inherit;
+    font-size: inherit;
+    transition: all 0.2s;
+
+    &:hover {
+        border-color: var(--lavender);
+    }
+    &:focus {
+        border-color: var(--yellow);
+    }
+}
+
+input {
+    min-width: 100%;
+    min-height: 2rem;
+}
+
+textarea {
+    width: 300px;
+    min-height: 6rem;
+}
+
+button {
+    font-family: "NewakeDemo", sans-serif;
+    font-size: 1.25rem;
+    font-weight: 400;
+    padding: 0.25em 0.5em;
+    cursor: pointer;
+    box-shadow: 5px 5px 15px rgba(38, 12, 57, 0.2);
+    color: var(--black);
+    background-color: var(--cream);
+    border: 3px solid var(--lilac);
+    border-radius: 5px;
+    transition: all 0.2s;
+
+    &:hover, &:focus {
+        background-color: var(--lilac);
+        border-color: var(--lavender);
+    }
+    &:active {
+        transform: translate(2px, 2px);
+    }
+}
 
 /*---------- FOOTER STYLING ----------*/
 
