@@ -67,7 +67,7 @@ section {
 }
 
 .profile-pic {
-  width: min(300px, 85%);
+  width: min(280px, 85%);
   filter: drop-shadow(5px 5px 10px rgba(54, 54, 99, 0.1));
 }
 .profile-pic img {
@@ -76,6 +76,7 @@ section {
 
 .about {
   gap: max(4vw, 1rem);
+  margin: 1rem;
 }
 .about-text {
   justify-content: space-between;
