@@ -12,6 +12,7 @@
   --cream: #f1f2ed;
   --yellow: #ddf760;
   --black: #121212;
+  --dark-peri: #484885;
 }
 
 html {
@@ -31,7 +32,7 @@ body {
 }
 
 *:focus {
-  outline: 3px solid var(--black);
+  outline: 3px solid var(--dark-peri);
   border-radius: 5px;
 }
 
