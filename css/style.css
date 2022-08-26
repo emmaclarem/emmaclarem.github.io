@@ -242,7 +242,7 @@ a:hover, a:focus {
 }
 
 .card {
-  width: min(280px, 90%);
+  width: min(270px, 90%);
   height: 100%;
   background-color: var(--lilac);
   border: 5px solid var(--lavender);
