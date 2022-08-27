@@ -216,6 +216,9 @@ a:hover, a:focus {
   margin-left: 0.25em;
   text-shadow: none;
 }
+.nav-home {
+  margin-block: 0;
+}
 .nav-links {
   list-style: none;
 }
