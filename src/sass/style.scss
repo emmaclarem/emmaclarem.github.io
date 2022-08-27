@@ -328,7 +328,7 @@ a {
     margin-inline: 0.5rem;
 }
 
-/*---------- DIVIDER STYLING ----------*/
+/*---------- DIVIDERS & ARROWS STYLING ----------*/
 .divider {
     width: 100%;
     margin-block: -8%;
@@ -350,6 +350,18 @@ a {
 .top {
     position: relative;
     z-index: 20;
+}
+
+.arrow {
+    width: 100%;
+    text-align: center;
+    .down {
+        position: absolute;
+    }
+}
+
+.to-top:hover {
+    color: var(--lilac);
 }
 
 /*---------- CONTACT FORM STYLING ----------*/
