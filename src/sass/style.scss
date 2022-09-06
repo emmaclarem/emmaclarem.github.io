@@ -1,0 +1,453 @@
+/*---------- GLOBAL STYLES ----------*/
+
+@font-face {
+    font-family: 'NewakeDemo';
+    src: url('../font/newake-font-demo-webfont.woff2') format('woff2'),
+         url('../font/newake-font-demo-webfont.woff') format('woff'),
+         url('../font/newake-font-demo-ttf.ttf') format('truetype'),
+         url('../font/newake-font-demo-otf.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+$peri: #6767ad;
+$lavender: #adb3d5;
+$lilac: #d8d6eb;
+$cream: #f1f2ed;
+$yellow: #ddf760;
+$black: #121212;
+$dark-peri: #484885;
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 60px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $cream; 
+    font-size: 100%;
+}
+
+*:focus {
+    outline: 3px solid $dark-peri;
+    border-radius: 5px;
+}
+
+section {
+    width: min(1400px, 97%);
+    margin-inline: auto;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    
+    &-column {
+        flex-direction: column;
+    }
+}
+
+.centred {
+    text-align: center;
+    width: 100%;
+}
+
+.right-align {
+    align-self: flex-end;
+}
+
+/*---------- LAYOUT STYLES ----------*/
+
+.landing {
+    margin-block: 25vh;
+    padding-top: 40px;
+}
+
+.profile-pic {
+    width: min(280px, 85%);
+    filter: drop-shadow(5px 5px 10px rgba(54, 54, 99, 0.1));
+    
+    img {
+        aspect-ratio: 1 / 1;
+
+    }
+}
+
+.about {
+    gap: max(4vw, 1rem);
+
+    &-text {
+        justify-content: space-between;
+        align-items: flex-start;
+        width: min(65ch, 85%);
+    }
+}
+
+.social-links {
+    margin-block: 1rem 
+}
+
+.social-links > * {
+    padding: 0.75em;
+}
+
+.fa-4x {
+    color: $cream;
+}
+
+.fa-lg {
+    margin-right: 0.65em;
+}
+
+.dev-icons {
+    gap: 1rem;
+
+    & > * {
+        margin: min(2vw, 2rem);
+    }
+}
+
+/*---------- TYPOGRAPHY STYLES ----------*/
+
+.text {
+    &-dark {
+        color: $black;
+    }
+    &-light {
+        color: $cream;
+    }
+    &-peri {
+        color: $peri;
+        transition: all 0.2s;
+        &:hover, &:focus {
+            color: $black;
+        }
+    }
+    &-lilac {
+        color: $lilac;
+    }
+    &-lav {
+        color: $lavender;
+        transition: all 0.2s;
+        &:hover, &:focus {
+            color: $peri;
+        }
+    }
+}
+
+.underline {
+    text-decoration: underline;
+    text-underline-offset: 0.05em;
+
+    &-peri {
+        text-decoration-color: $peri;
+    }
+    &-yellow {
+        text-decoration-color: $yellow;
+    }
+    
+}
+
+h1, h2, h3 {
+    font-family: 'NewakeDemo', sans-serif;
+}
+
+h1 {
+    font-size: max(5rem, 8vw);
+    font-weight: 400;
+    text-align: center;
+    line-height: max(5rem, 8vw);
+    text-shadow: 5px 5px 10px rgba(54, 54, 99, 0.2);
+}
+
+h2 {
+    font-size: 3rem;
+    font-weight: 400;
+    line-height: 3rem;
+    padding-block: 1rem;
+    text-shadow: 5px 5px 7px rgba(54, 54, 99, 0.2);
+}
+
+h3 {
+    font-size: 2rem;
+    font-weight: 400;
+    text-align: center;
+    text-shadow: 3px 3px 5px rgba(54, 54, 99, 0.2);
+}
+
+p {
+    line-height: 1.5rem;
+}
+
+p, a {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    color: $black;
+    max-width: 65ch;
+}
+
+a {
+    text-decoration: none;
+    margin-block: 1em;
+    cursor: pointer;
+
+    &:hover, &:focus {
+        text-decoration: underline $yellow;
+        color: $cream;
+    }
+}
+
+
+/*---------- NAVBAR STYLING ----------*/
+
+.nav {
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    inset: 0 0 auto 0;
+    background-color: rgba(#f1f2ed, 0.6);
+    backdrop-filter: blur(20px) saturate(180%);
+    box-shadow: 2px 2px 15px rgba(54, 54, 99, 0.1);
+    
+    &-content {
+        justify-content: space-between;
+        width: min(1200px, 98%);
+        margin-inline: auto;
+        margin-block: 0.25em;
+    }
+    &-title {
+        margin-left: 0.25em;
+        text-shadow: none;
+    }
+    &-home {
+        margin-block: 0;
+    }
+    &-links {
+        list-style: none;
+    }
+    &-link a {
+        margin-inline: 0.6em;
+        padding: 0.1em 0.4em;
+        border-radius: 10px;
+        text-decoration: underline solid $yellow;
+        text-decoration-thickness: 2px;
+        font-weight: 800;
+        color: $dark-peri;
+        transition: background-color 0.3s;
+        &:hover {
+            background-color: $yellow;
+        }
+    }
+}
+
+
+/*---------- CARDS STYLING ----------*/
+
+.card-container {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-block: 2rem;
+}
+
+.card {
+    width: min(270px, 90%);
+    height: 100%;
+    background-color: $lilac;
+    border: 5px solid $lavender;
+    border-radius: 20px;
+    text-align: center;
+    transition: all 0.2s;
+    box-shadow: 5px 5px 15px rgba(54, 54, 99, 0.2);
+    margin: 1rem;
+
+    img {
+        width: 100%;
+        border-top-left-radius: 16px;
+        border-top-right-radius: 16px;
+        overflow: hidden;
+    }
+    
+    &-text {
+        margin: 0.8rem;
+
+        > * {
+            padding-top: 8px;
+        }
+        &-heading {
+            font-family: 'NewakeDemo', sans-serif;
+            letter-spacing: 0.05em;
+            font-size: 1.3rem;
+        }
+        &-subhead {
+            opacity: 0.6;
+            font-size: 0.8rem;
+        }
+        &-p {
+            line-height: 1.5em;
+            font-size: 0.9rem;
+            width: 95%;
+            margin: 0 auto;
+        }
+    }
+    &-icons {
+        margin: 0.8rem;
+        padding: 10px 0;
+
+        a {
+            color: $peri;
+            margin-inline: 20px;
+
+            &:hover, &:focus {
+                color: $yellow;
+                padding: 2px;
+                filter: drop-shadow(2px 2px 3px rgba(54, 54, 99, 0.7));
+            }
+        }
+    }
+    &:hover, &:focus {
+        transform: scale(1.03);
+    }
+}
+ 
+.portfolio-logo {
+    color: $peri;
+    opacity: 0.5;
+    margin-inline: 0.5rem;
+}
+
+/*---------- DIVIDERS & ARROWS STYLING ----------*/
+
+.divider {
+    width: 100%;
+    margin-block: -8%;
+    z-index: 0;
+
+    &-bottom {
+        transform: rotate(180deg);
+        z-index: 0;
+    }
+}
+
+.peri-bg {
+    position: relative;
+    width: 100%;
+    background-color: $peri;
+    z-index: 10;
+}
+
+.top {
+    position: relative;
+    z-index: 20;
+}
+
+.arrow {
+    width: 100%;
+    text-align: center;
+    .down {
+        position: absolute;
+    }
+}
+
+.to-top:hover {
+    color: $lilac;
+}
+
+/*---------- CONTACT FORM STYLING ----------*/
+
+.contact {
+    gap: 3rem;
+    padding: 2.5rem;
+    align-items: flex-start;
+
+    &-details {
+        border: none;
+        gap: 0.75rem;
+        justify-content: flex-start;
+    }
+    &-text h3 {
+        margin-bottom: 1rem;
+    }
+}
+
+label {
+    display: block;
+    color: $cream;
+}
+
+input, textarea {
+    background-color: $cream;
+    border: 3px solid $lilac;
+    border-radius: 5px;
+    padding: 0.5em;
+    margin-bottom: 1rem;
+    box-shadow: 5px 5px 15px rgba(54, 54, 99, 0.2);
+    font-family: inherit;
+    font-size: inherit;
+    transition: all 0.2s;
+    width: 100%;
+
+    &:hover {
+        border-color: $lavender;
+    }
+}
+
+input {
+    min-height: 2rem;
+}
+
+textarea {
+    min-height: 6rem;
+}
+
+button {
+    font-family: "NewakeDemo", sans-serif;
+    font-size: 1.25rem;
+    font-weight: 400;
+    padding: 0.25em 0.5em;
+    cursor: pointer;
+    box-shadow: 5px 5px 15px rgba(54, 54, 99, 0.2);
+    color: $black;
+    background-color: $cream;
+    border: 3px solid $lilac;
+    border-radius: 5px;
+    transition: all 0.2s;
+
+    &:hover, &:focus {
+        background-color: $lilac;
+        border-color: $lavender;
+    }
+    &:active {
+        transform: translate(2px, 2px);
+    }
+}
+
+.captcha {
+    width: fit-content;
+    margin-bottom: 1rem;
+    box-shadow: 5px 5px 15px rgba(54, 54, 99, 0.2);
+    cursor: pointer;
+}
+
+/*---------- FOOTER STYLING ----------*/
+
+footer {
+    position: relative;
+    padding-block: 1rem;
+    font-size: 0.75rem;
+}
+
+.footer {
+    width: 90%;
+    margin-inline: auto;
+}
+
