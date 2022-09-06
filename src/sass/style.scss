@@ -10,15 +10,13 @@
     font-style: normal;
 }
 
-:root {
-    --peri: #6767ad;
-    --lavender: #adb3d5;
-    --lilac: #d8d6eb;
-    --cream: #f1f2ed;
-    --yellow: #ddf760;
-    --black: #121212;
-    --dark-peri: #484885;
-}
+$peri: #6767ad;
+$lavender: #adb3d5;
+$lilac: #d8d6eb;
+$cream: #f1f2ed;
+$yellow: #ddf760;
+$black: #121212;
+$dark-peri: #484885;
 
 html {
     scroll-behavior: smooth;
@@ -32,12 +30,12 @@ html {
 }
 
 body {
-    background-color: var(--cream); 
+    background-color: $cream; 
     font-size: 100%;
 }
 
 *:focus {
-    outline: 3px solid var(--dark-peri);
+    outline: 3px solid $dark-peri;
     border-radius: 5px;
 }
 
@@ -85,7 +83,6 @@ section {
 
 .about {
     gap: max(4vw, 1rem);
-    margin: 1rem;
 
     &-text {
         justify-content: space-between;
@@ -103,7 +100,7 @@ section {
 }
 
 .fa-4x {
-    color: var(--cream);
+    color: $cream;
 }
 
 .fa-lg {
@@ -122,26 +119,26 @@ section {
 
 .text {
     &-dark {
-        color: var(--black);
+        color: $black;
     }
     &-light {
-        color: var(--cream);
+        color: $cream;
     }
     &-peri {
-        color: var(--peri);
+        color: $peri;
         transition: all 0.2s;
         &:hover, &:focus {
-            color: var(--black);
+            color: $black;
         }
     }
     &-lilac {
-        color: var(--lilac);
+        color: $lilac;
     }
     &-lav {
-        color: var(--lavender);
+        color: $lavender;
         transition: all 0.2s;
         &:hover, &:focus {
-            color: var(--peri);
+            color: $peri;
         }
     }
 }
@@ -151,10 +148,10 @@ section {
     text-underline-offset: 0.05em;
 
     &-peri {
-        text-decoration-color: var(--peri);
+        text-decoration-color: $peri;
     }
     &-yellow {
-        text-decoration-color: var(--yellow);
+        text-decoration-color: $yellow;
     }
     
 }
@@ -194,7 +191,7 @@ p, a {
     font-family: 'Space Grotesk', sans-serif;
     font-size: 1rem;
     font-weight: 400;
-    color: var(--black);
+    color: $black;
     max-width: 65ch;
 }
 
@@ -204,8 +201,8 @@ a {
     cursor: pointer;
 
     &:hover, &:focus {
-        text-decoration: underline var(--yellow);
-        color: var(--cream);
+        text-decoration: underline $yellow;
+        color: $cream;
     }
 }
 
@@ -241,13 +238,13 @@ a {
         margin-inline: 0.6em;
         padding: 0.1em 0.4em;
         border-radius: 10px;
-        text-decoration: underline solid var(--yellow);
+        text-decoration: underline solid $yellow;
         text-decoration-thickness: 2px;
         font-weight: 800;
-        color: var(--dark-peri);
+        color: $dark-peri;
         transition: background-color 0.3s;
         &:hover {
-            background-color: var(--yellow);
+            background-color: $yellow;
         }
     }
 }
@@ -265,8 +262,8 @@ a {
 .card {
     width: min(270px, 90%);
     height: 100%;
-    background-color: var(--lilac);
-    border: 5px solid var(--lavender);
+    background-color: $lilac;
+    border: 5px solid $lavender;
     border-radius: 20px;
     text-align: center;
     transition: all 0.2s;
@@ -307,11 +304,11 @@ a {
         padding: 10px 0;
 
         a {
-            color: var(--peri);
+            color: $peri;
             margin-inline: 20px;
 
             &:hover, &:focus {
-                color: var(--yellow);
+                color: $yellow;
                 padding: 2px;
                 filter: drop-shadow(2px 2px 3px rgba(54, 54, 99, 0.7));
             }
@@ -323,12 +320,13 @@ a {
 }
  
 .portfolio-logo {
-    color:var(--peri);
+    color: $peri;
     opacity: 0.5;
     margin-inline: 0.5rem;
 }
 
 /*---------- DIVIDERS & ARROWS STYLING ----------*/
+
 .divider {
     width: 100%;
     margin-block: -8%;
@@ -343,7 +341,7 @@ a {
 .peri-bg {
     position: relative;
     width: 100%;
-    background-color: var(--peri);
+    background-color: $peri;
     z-index: 10;
 }
 
@@ -361,7 +359,7 @@ a {
 }
 
 .to-top:hover {
-    color: var(--lilac);
+    color: $lilac;
 }
 
 /*---------- CONTACT FORM STYLING ----------*/
@@ -383,12 +381,12 @@ a {
 
 label {
     display: block;
-    color: var(--cream);
+    color: $cream;
 }
 
 input, textarea {
-    background-color: var(--cream);
-    border: 3px solid var(--lilac);
+    background-color: $cream;
+    border: 3px solid $lilac;
     border-radius: 5px;
     padding: 0.5em;
     margin-bottom: 1rem;
@@ -396,22 +394,18 @@ input, textarea {
     font-family: inherit;
     font-size: inherit;
     transition: all 0.2s;
+    width: 100%;
 
     &:hover {
-        border-color: var(--lavender);
-    }
-    &:focus {
-        border-color: var(--yellow);
+        border-color: $lavender;
     }
 }
 
 input {
-    width: 100%;
     min-height: 2rem;
 }
 
 textarea {
-    width: 100%;
     min-height: 6rem;
 }
 
@@ -422,15 +416,15 @@ button {
     padding: 0.25em 0.5em;
     cursor: pointer;
     box-shadow: 5px 5px 15px rgba(54, 54, 99, 0.2);
-    color: var(--black);
-    background-color: var(--cream);
-    border: 3px solid var(--lilac);
+    color: $black;
+    background-color: $cream;
+    border: 3px solid $lilac;
     border-radius: 5px;
     transition: all 0.2s;
 
     &:hover, &:focus {
-        background-color: var(--lilac);
-        border-color: var(--lavender);
+        background-color: $lilac;
+        border-color: $lavender;
     }
     &:active {
         transform: translate(2px, 2px);
